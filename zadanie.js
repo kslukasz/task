@@ -33,25 +33,48 @@ function headerMobile(head) {
     div.classList.add("mobileMenu");
     head.appendChild(div);
     const menu = document.createElement("div");
-    menu.classList.add("mobileMenuContent" , "visible");
+    menu.classList.add("mobileMenuContent", "visible");
     createMenuMobile(menu)
     div.appendChild(menu);
-    div.addEventListener("click", ()=> menuMobile(menu));
+    div.addEventListener("click", () => menuMobile(menu));
 }
 
 function menuMobile(menu) {
-  menu.classList.toggle("visible");
+    menu.classList.toggle("visible");
 }
 
 
 function startApp() {
-    if (window.innerWidth > 950) {
-        header();
-        sectionView(data);
-    } else {
+    const isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+    // console.log(isMobile.any());
+
+
+    if (isMobile.any()) {
         headerMobile(head);
         sectionMobile(data);
-       
+    } else {
+        header();
+        sectionView(data);
+
     }
 }
 startApp();
