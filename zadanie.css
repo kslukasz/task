@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+body , html {
+    margin: 0;
+    padding: 0;    
+}
+header {   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: normal normal 600 18px/17px Montserrat;
+    height: 84px;
+    border-bottom: 1px solid lightgray;
+   
+}
+.linkIvision{
+    margin-left: 100px;    
+}
+.buttons{
+    display:flex;
+    justify-content: space-between;
+    min-width: 575px;
+    margin-right: 100px;
+}
+.mainButton{
+    font: normal normal normal 13px/16px Montserrat;
+}
+.section {
+    display:flex;
+    flex-wrap: wrap;
+    min-width: 375px;
+    justify-content: center;    
+    text-align: center; 
+
+}
+.sectionView{
+    margin-top: 70px;  
+    margin-right: 100px;
+}
+.sectionAside{ 
+    margin-top: 120px;
+    padding-left: 150px; 
+    border-left: 1px solid lightgrey;    
+}
+.start{
+    font: normal normal 37px Montserrat;
+}
+.content{
+    font: normal normal 20px Montserrat;
+    color: #979BAF;
+}
+.companyName{
+    font: normal normal 600 16px/22px Montserrat;
+}
+.companyAdress{
+    width: 142px;
+    font: normal normal normal 13px/18px Montserrat;
+}
+.title{
+    display: inline-block;
+    font: normal normal normal 24px Montserrat;
+    margin-bottom: 18px;
+}
+.delete{
+    color:#5F74DD;
+    display: inline-block;
+    float: right;    
+    font-size:24px;
+}
+.delete:hover{
+    cursor: pointer;
+    
+}
+
+.lightBox{
+    position: absolute;   
+    top: 100px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255); 
+    border-radius: 3px;   
+    width: 600px;
+    height: 500px;
+    padding:30px;
+}
+.backgroundBox{
+    position: absolute; 
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: #5F74DD;
+    opacity: 0.9;
+}
+.task{
+    border-top: 1px solid lightgray;
+}
+
+.spanName{
+    display:block;
+    padding-top: 18px;
+    color:#5F74DD;
+    font: normal normal normal 16px Montserrat;
+}
+.spanCity{
+    display:block;
+    padding-bottom: 18px;
+    color:#979BAF;
+    font: normal normal normal 12px Montserrat;
+}
+.buttonBox{
+    padding: 20px 50px;
+    background-color: #5F74DD;
+    border-radius: 3px;
+    font: normal normal normal 16px Montserrat;
+    border-style: none;
+    color:#FFFFFF;
+}
+.buttonBox:hover{
+    cursor: pointer;
+}
